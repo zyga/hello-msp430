@@ -38,3 +38,15 @@ clean:
 # Create executables with the .elf suffix
 %.elf: %.c
 	$(LINK.c) $^ $(OUTPUT_OPTION)
+
+# Do some validation when flash is in the goal list
+ifeq (flash, $(filter flash,$(MAKECMDGOALS)))
+ifneq (1, $(words $(filter %.elf,$(MAKECMDGOALS))))
+$(error You must specify exactly one .elf target to flash)))
+endif
+endif
+
+# Allow flashing a single elf file directly
+.PHONY: flash
+flash: $(firstword $(filter %.elf,$(MAKECMDGOALS)))
+	mspdebug rf2500 "prog $^" "exit"
