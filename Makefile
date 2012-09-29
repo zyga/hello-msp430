@@ -13,7 +13,7 @@ CC=msp430-gcc
 # Explicitly specify the MCU we're using so that
 # appropriate include files and linker scripts
 # are pulled in
-LDFLAGS+=-mmcu=$(MCU)
+TARGET_ARCH=-mmcu=$(MCU)
 
 # Enable all warnings by default
 CFLAGS=-Wall
