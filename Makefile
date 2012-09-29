@@ -34,3 +34,7 @@ clean:
 
 # Don't apply any implicit rules from make
 .SUFFIXES:
+
+# Create executables with the .elf suffix
+%.elf: %.c
+	$(LINK.c) $^ $(OUTPUT_OPTION)
