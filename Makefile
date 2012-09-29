@@ -30,6 +30,7 @@ $(EXAMPLES): %.elf: %.c
 .PHONY: all
 all: $(EXAMPLES)
 
+# Clean all of the elf files
 .PHONY: clean
 clean:
 	rm -f $(EXAMPLES)
