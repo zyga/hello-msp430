@@ -23,9 +23,6 @@ EXAMPLES = $(patsubst %.c,%.elf,$(wildcard *.c))
 $(EXAMPLES): %.elf: %.c
 	$(LINK.c) $^ $(OUTPUT_OPTION)
 
-# Don't apply any implicit rules from make
-.SUFFIXES:
-
 # Build all of the examples
 .PHONY: all
 all: $(EXAMPLES)
@@ -34,3 +31,6 @@ all: $(EXAMPLES)
 .PHONY: clean
 clean:
 	rm -f $(EXAMPLES)
+
+# Don't apply any implicit rules from make
+.SUFFIXES:
