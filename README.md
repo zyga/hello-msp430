@@ -1,10 +1,12 @@
 Hello MSP430
 ============
 
+Version 0.1 :-)
+
 This repository contains a (growing) number of simple programs for the TI
 MSP430 micro controller. All of those programs are developed against the TI
-MSP430 LaunchPad board (http://www.ti.com/ww/en/launchpad/msp430\_head.html) and
-built with free, open source software toolchain.
+MSP430 LaunchPad board (http://www.ti.com/ww/en/launchpad/msp430\_head.html)
+and built with free, open source software toolchain.
 
 Getting started
 ===============
