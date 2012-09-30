@@ -144,6 +144,10 @@ The output, on success, looks like this:
     Writing   32 bytes to ffe0 [section: .vectors]...
     Done, 112 bytes written
 
+Then run the 'exit' command detach the debugger and let the program start:
+
+    (mspdebug) exit
+
 If something fails just disconnect the board, quit mspdebug and try again.
 
 That's it, your board is now happily doing nothing, in a busy, non-low-power
