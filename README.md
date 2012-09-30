@@ -1,10 +1,12 @@
 Hello MSP430
 ============
 
+Version 0.1 :-)
+
 This repository contains a (growing) number of simple programs for the TI
 MSP430 micro controller. All of those programs are developed against the TI
-MSP430 LaunchPad board (http://www.ti.com/ww/en/launchpad/msp430\_head.html) and
-built with free, open source software toolchain.
+MSP430 LaunchPad board (http://www.ti.com/ww/en/launchpad/msp430\_head.html)
+and built with free, open source software toolchain.
 
 Getting started
 ===============
@@ -144,7 +146,21 @@ The output, on success, looks like this:
     Writing   32 bytes to ffe0 [section: .vectors]...
     Done, 112 bytes written
 
+Then run the 'exit' command detach the debugger and let the program start:
+
+    (mspdebug) exit
+
 If something fails just disconnect the board, quit mspdebug and try again.
 
 That's it, your board is now happily doing nothing, in a busy, non-low-power
 mode!
+
+Flashing the second program
+===========================
+
+Since manually flashing with mspdebug is kind of tedious you can quickly flash
+a single elf file by adding the special 'flash' target when invoking make:
+
+    $ make flash empty.elf
+
+This will properly build (if needed) and flash the program.
